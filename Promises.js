@@ -35,3 +35,26 @@ a.catch((error)=>{
 // answere = 
 pending 
 the error accured 
+
+
+// chaining .then calls
+
+let p1 = new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+      console.log("we done")
+      resolve("poyoil")
+  },2000)
+  
+})
+  p1.then((value)=>{
+  console.log(value)
+  let p2 = new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+         console.log("jugno ustaad ") 
+          resolve(90)
+      },3000)
+    
+  })
+}).then(()=>{
+     console.log("we are pakka done ") 
+})
